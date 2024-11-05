@@ -1,0 +1,62 @@
+.mybox {
+    /* display: flex; */
+    align-items: center;
+    /* gap: 85%; */
+  }
+  .icons {
+    display: flex;
+    gap: 20px;
+  }
+  .buttons{
+    display: flex;
+    justify-content: center;
+  }
+  .buttons button{
+    width: 20% ;
+  }
+  .tasks-sec{
+    display: flex;
+    gap:65%;
+    margin-left: 14%;
+    
+  }
+  .control>button:hover .box{
+    display: block;
+  }
+  .text-container{
+    padding: 10px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .text-container>h2{
+    font-weight: 600;
+     font-size: 24px;
+     font-family: Arial, Helvetica, sans-serif;
+  }
+  #lname{
+    width: 100%;
+  }
+  .closing-buttons{
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+  }
+  .task-cont{
+    display: flex;
+    align-items: center;
+
+  }
+  .task_dl{
+    display: flex;
+    font-size: 22px;
+    font-weight: 500;
+  }
+.titleinput{
+    font-size: 20px;
+    font-weight: 600;
+}
+#list{
+    margin:auto;
+    width:70%;
+}

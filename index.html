@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo App</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="./main.css">
+    
+   
+  </head>
+  <body style="position: relative;">
+    <div class="box-hidden " style="display: none; position:absolute; z-index: 10; background-color: rgba(54, 49, 49, 0.3); width: 100%; height: 100%; "  id="taskContainer">
+      <div class="black-container" style="margin: 200px auto; width: 500px; height: 350px; background-color: white; border-radius: 5px;">
+        <div class="text-container">
+          <div style="display: flex; justify-content: right;">
+            <button onclick="closeTaskContainer();" style="border: none; ">
+              <span class="material-symbols-outlined" >
+                close
+                </span>
+
+            </button>
+           
+          </div>
+              <h2 >Task details</h2>
+              <label for="lname">Title</label>
+              <input type="text" id="lname" name="lname" placeholder="Add a task title">
+              <div style="display: flex; gap: 10px;">
+                    <label for="cars" placeholder="select Priority">Priority</label>
+                        <select id="priorityInput" >
+                          <option value="volvo">High</option>
+                          <option value="saab">Medium</option>
+                          <option value="mercedes">Low</option>
+                          
+                        </select>
+                    <label for="lname">Deadline</label><br>
+                    <input id="dateInput" type="date">
+              
+              </div>
+              <textarea id="textInput"
+              class="textarea is-small is-danger"
+              placeholder="Add any comments to your task"></textarea>
+              <div class="closing-buttons">
+                <button class="button is-small is-danger is-outlined" id="close-button" onclick="closeTaskContainer();">Close</button>
+                <button class="button is-small is-danger is-focused" id="add-button" onclick="addToOthersection();">Add task</button>
+              </div>
+
+            </div>
+
+        </div>
+       
+   
+  </div>
+    <section class="section has-background-danger-light" style="height: 100vw">
+      <div class="container todo-container">
+        <h1
+          class="title has-text-centered has-text-danger is-size-1 is-italic is-family-sans-serif"
+        >
+          TODO app
+        </h1>
+        <div class="buttons">
+          <button class="button is-large is-responsive is-danger is-inverted  " onclick="today_click();">Today
+            <div id="today-container" style="display: none;"></div>
+          </button>
+          <button class="button is-large is-responsive is-danger is-inverted">Pending</button>
+          <button class="button is-large is-responsive is-danger is-inverted">Overdue</button>
+          
+        </div>
+        <div class="tasks-sec">
+
+          <h1 class="title has-text-danger has-text-weight-light is-family-monospace">Tasks </h1>
+          <div class="control">
+            <button class="button is-danger is-hovered" onclick="addtask();">
+              ADD AGAIN
+            </button>
+           
+          </div>
+
+
+        </div>
+
+
+       
+      </div>
+      <div id="list" class="box"></div>
+    </section>
+
+    <script src="./main.js"></script>
+
+    
+  </body>
+</html>
+
+
+
